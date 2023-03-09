@@ -24,9 +24,9 @@ class Filme{
         this.classificacao=classificacao;
         this.avaliacao=avaliacao;
     }
-    getCard = async () =>
+    getCard = async () => {
         let card = document.createElement("div");
-        card.setAttribute("class","card");
+        card.setAttribute("class", "card");
         let imgCartaz= document.createElement("img");
         imgCartaz.setAttribute("class", "card-img-topz");
         imgCartaz.setAttribute("src",this.cartaz);
@@ -36,11 +36,11 @@ class Filme{
         hCardTitle.setaAttribute("class", "card-title");
         let divDetalhes = document.createElement("div");
         divDetalhes.setAttribute("style","display:flex; justify-content:space—around;");
-        let divGenero.setAttribute("style","Fflex-grow:1;");
-        let divanoProducao= document.createElement("div”");
+        divGenero.setAttribute("style","flex—grow:1;");
+        let divAnoProducao= document.createElement("div");
         divAnoProducao.setAttribute("style","flex—grow:1;");
         let divClassificacao= document.createElement("div");
-        divclassífícacao.setAttribute("style","flex—grou:1;");
+        divclassífícacao.setAttribute("style","flex—grow:1;");
         hCardTitle.appendChild(docunent.createTextNode(this.titulo));
         divGeneno.appendchild(docu-ent.createTextNode(this.genero));
         divAnoProducao.appendchild(doculent.createTextNode(this.ano));
@@ -53,4 +53,5 @@ class Filme{
         cardBody.appendChild(hCardTitle);
         cardBody.appendChild(divDetalhes);
         return card;
+    }
 }
