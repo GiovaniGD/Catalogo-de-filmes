@@ -1,11 +1,14 @@
-let inputBuscarFilme = document.querySelector("input-buscar-filme");
-let btnBuscarFilme = document.querySelector("btn-buscar-filme");
+let inputBuscarFilme = document.querySelector("#input-buscar-filme");
+let btnBuscarFilme = document.querySelector("#btn-buscar-filme");
 
-btnBuscarFilme.onclick = async () => {
-    if(inputBuscarFilme.ariaValueMax.lenght > 0){
-        fetch("http://www.omdapi.com/?i=tt3896198&apikey=abb0e8ac"+inputBuscarFilme.value, {mode:"cors"})
-        .then((resp)=> resp.json())
-        .then((resp)=> {
+btnBuscarFilme.onclick = () => {
+    if(inputBuscarFilme.value.length > 0){
+        let filmes = new Array();
+        fetch("http://www.omdapi.com/?apikey=abb0e8ac&s="+inputBuscarFilme.value, {mode: "cors"})
+        .then((resp) => resp.json())
+        console.log(2)
+        .then((resp) => {
+            console.log(1)
             resp.Search.forEach((item)=>{
                 console.log(item);
                 let filme = new Filme(
