@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 #lista-filmes{
     display: flex;
@@ -10,8 +11,14 @@
 }
 #logo{
     width: 3rem;
+    height: 2.8rem;
+}
+img{
+    width: 21.5vmax;
+    height: 32vmax;
 }
 .card{
-    height: 30px;
-    margin: 2em;
+    width: 20.73rem;
+    height: 39rem;
+    margin: 1em;
 }
