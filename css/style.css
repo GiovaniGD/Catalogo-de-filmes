@@ -14,11 +14,27 @@
     height: 2.8rem;
 }
 img{
-    width: 21.5vmax;
-    height: 32vmax;
+    width: 20.63rem;
+    height: 30rem;
 }
 .card{
     width: 20.73rem;
     height: 39rem;
     margin: 1em;
+}
+.btnDetalhesFilme{
+    margin-top: 0.7rem;
+    margin-left: 6.2rem;
+    color: #198754;
+    background-color: transparent;
+    border-color: #198754;
+    font-size: 1rem;
+    padding: 0.335rem 0.65rem;
+    font-size: 1rem;
+    border-radius: 1.3rem;
+}
+.btnDetalhesFilme:hover{
+    border-color: transparent;
+    color: white;
+    background-color: #198754;
 }
