@@ -23,9 +23,9 @@ class Filme{
         this.elenco=elenco;
         this.classificacao=classificacao;
         this.avaliacao=avaliacao;
+        this.btnDetalhes = null;
     }
     getCard = async () =>{
-
         let card = document.createElement("div");
         card.setAttribute("class", "card");
 
@@ -55,19 +55,35 @@ class Filme{
         divGenero.appendChild(document.createTextNode(this.genero));
         divAnoProducao.appendChild(document.createTextNode(this.ano));
         divClassificacao.appendChild(document.createTextNode(this.classificacao));
+
         divDetalhes.appendChild(divGenero);
         divDetalhes.appendChild(divAnoProducao);
         divDetalhes.appendChild(divClassificacao);
+
         card.appendChild(imgCartaz);
         card.appendChild(cardBody);
         cardBody.appendChild(hCardTitle)
         cardBody.appendChild(divDetalhes);
 
-        let btnDetalhes = document.createElement('button');
-        btnDetalhes.appendChild(document.createTextNode("Detalhes"));
-        btnDetalhes.setAttribute("id", "btn-detalhes");
-        cardBody.appendChild(btnDetalhes);
-
+        this.setBtnDetalhes();
+        cardBody.appendChild(this.getBtnDetalhes());
         return card;
     }
+
+    setBtnDetalhes = () =>{
+        this.btnDetalhes = document.createElement('button');
+        this.btnDetalhes.appendChild(document.createTextNode("Detalhes"));
+        this.btnDetalhes.setAttribute("id", this.id);
+        this.btnDetalhes.setAttribute("class", "btnDetalhesFilme");
+        this.btnDetalhes.setAttribute("type", "submit");
+    }
+    
+    getBtnDetalhes = () =>{
+        return this.btnDetalhes;
+    }
+
+    getDetalhesFilmes = () =>{
+        btnDetalhes.appendChild(document.createTextNode(this.filme));
+    }
+
 }
