@@ -43,13 +43,13 @@ class Filme{
         divDetalhes.setAttribute("style", "display:flex; justify-content:space-aroud;");
 
         let divGenero = document.createElement("div");
-        divGenero.setAttribute("Style", "flex-grow:1;");
+        divGenero.setAttribute("style", "flex-grow: 1.2;");
 
         let divAnoProducao = document.createElement("div");
-        divAnoProducao.setAttribute("style", "flex-grow:1;");
+        divAnoProducao.setAttribute("style", "flex-grow: 1.2;");
 
         let divClassificacao = document.createElement("div");
-        divClassificacao.setAttribute("style", "flex-grow:1;");
+        divClassificacao.setAttribute("style", "flex-grow: 0;");
 
         hCardTitle.appendChild(document.createTextNode(this.titulo));
         divGenero.appendChild(document.createTextNode(this.genero));
@@ -67,11 +67,12 @@ class Filme{
 
         this.setBtnDetalhes();
         cardBody.appendChild(this.getBtnDetalhes());
+
         return card;
     }
 
     setBtnDetalhes = () =>{
-        this.btnDetalhes = document.createElement('button');
+        this.btnDetalhes = document.createElement("button");
         this.btnDetalhes.appendChild(document.createTextNode("Detalhes"));
         this.btnDetalhes.setAttribute("id", this.id);
         this.btnDetalhes.setAttribute("class", "btnDetalhesFilme");
@@ -81,9 +82,10 @@ class Filme{
     getBtnDetalhes = () =>{
         return this.btnDetalhes;
     }
-
     getDetalhesFilmes = () =>{
-        btnDetalhes.appendChild(document.createTextNode(this.filme));
-    }
+        let abaDetalhes = document.createElement("div");
+        abaDetalhes.appendChild("class", "abaDetalhes");
 
+        return this.abaDetalhes;
+    }
 }
