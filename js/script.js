@@ -3,6 +3,7 @@ let btnBuscarFilme = document.querySelector("#btn-buscar-filme");
 let mostrarFilme = document.querySelector("#mostrar-filme");
 let card = document.querySelector("#lista-filmes");
 let imgCartaz = document.createElement("img");
+let navFavoritos = document.querySelector("#nav-favoritos");
 
 btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value.length > 0){
@@ -63,7 +64,7 @@ let listarFilmes = async(filmes) => {
     listaFilmes.innerHTML = "";
 
     let btnFechar = document.createElement("button");
-    btnFechar.setAttribute("id", "btn-fecha");
+    btnFechar.setAttribute("id", "btn-fechar");
     let btnTexto = document.createTextNode("Fechar");
     btnFechar.appendChild(btnTexto);
     let divFechar = document.querySelector("#div-fechar");
@@ -74,6 +75,18 @@ let listarFilmes = async(filmes) => {
         btnFechar.style.display = "none";
         card.style.display="flex";
     }
+
+    let btnSalvar = document.createElement("button");
+    btnSalvar.setAttribute("id", "btn-salvar");
+    let textoSalvar = document.createTextNode("Salvar");
+    btnSalvar.appendChild(textoSalvar);
+    let divSalvar = document.querySelector("#div-salvar");
+    divSalvar.appendChild(btnSalvar);
+
+    btnSalvar.onclick = () => {
+        salvarFilme(filme);
+    }
+
 
     if(filmes.length > 0) {
         filmes.forEach(async(filme) => {
@@ -87,3 +100,9 @@ let listarFilmes = async(filmes) => {
         });
     }
 }
+
+        //let filmesString = localStorage.getItem("filmesFavoritos");
+        //filmes = JSON.parse(filmesString);
+        //filmes.push(filme);
+        //filmes = JSON.stringify(filmes);
+        //localStorage.setItem("filmesFavoritos", item);

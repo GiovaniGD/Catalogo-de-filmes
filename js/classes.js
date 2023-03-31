@@ -16,7 +16,7 @@ class Filme{
         this.titulo=titulo;
         this.ano=ano;
         this.genero=genero;
-        this.duracao = duracao,
+        this.duracao=duracao,
         this.sinopse=sinopse;
         this.cartaz=cartaz;
         this.direcao=direcao;
@@ -43,7 +43,7 @@ class Filme{
         divDetalhes.setAttribute("style", "display:flex; justify-content:space-aroud;");
 
         let divGenero = document.createElement("div");
-        divGenero.setAttribute("style", "flex-grow: 1.2;");
+        divGenero.setAttribute("style", "flex-grow: 0.7;");
 
         let divAnoProducao = document.createElement("div");
         divAnoProducao.setAttribute("style", "flex-grow: 1.2;");
@@ -81,11 +81,5 @@ class Filme{
     
     getBtnDetalhes = () =>{
         return this.btnDetalhes;
-    }
-    getDetalhesFilmes = () =>{
-        let abaDetalhes = document.createElement("div");
-        abaDetalhes.appendChild("class", "abaDetalhes");
-
-        return this.abaDetalhes;
     }
 }
