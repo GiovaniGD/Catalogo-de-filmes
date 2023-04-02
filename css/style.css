@@ -16,7 +16,7 @@ body{
 #input-buscar-filme{
     width: 75%;
 }
-#lista-filmes{
+#listar-filmes{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
@@ -34,7 +34,14 @@ body{
 .card{
     width: 20.73rem;
     height: 39rem;
-    margin: 1em;
+    margin: 1rem;
+}
+.card:hover{
+    width: 20.73rem;
+    height: 39rem;
+    margin: 1rem;
+    background-color: #f8f9fa;
+    transition: background-color .15s ease-in-out;
 }
 .card-title{
     font-family: 'Staatliches', cursive;
@@ -50,48 +57,80 @@ body{
     padding: 0.335rem 0.75rem;
     font-size: 1rem;
     border-radius: 1.3rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
 }
 .btnDetalhesFilme:hover{
     border-color: transparent;
     color: white;
     background-color: #198754;
 }
-#btn-fecha{
+#btn-fechar{
+    float: left;
+    display: flex;
     margin-top: 2.5rem;
-    margin-left: 9rem;
+    margin-left: 3.5rem;
+    font-weight: 500;
     color: #ca3535;
     background-color: transparent;
     border-color: #ca3535;
     border: 1px solid #ca3535;
     font-size: 1rem;
-    padding: 0.335rem 0.95rem;
-    font-size: 1rem;
+    padding: 0.335rem 1rem;
     border-radius: 1.3rem;
     transition: color .15s ease-in-out,
     background-color .15s ease-in-out,
     border-color .15s ease-in-out,
     box-shadow .15s ease-in-out;
 }
-#btn-fecha:hover{
+#btn-fechar:hover{
     border-color: transparent;
     color: white;
     background-color: #ca3535;
 }
+#btn-salvar{
+    float: left;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-left: 4rem;
+    color: #198754;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: #198754;
+    border: 1px solid #198754;
+    font-size: 1rem;
+    padding: 0.335rem 1.15rem;
+    border-radius: 1.3rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+#btn-salvar:hover{
+    border-color: transparent;
+    color: white;
+    background-color: #198754;
+}
 #mostrar-filme{
     display: flex;
-    margin-top: 3rem;
-    margin-left: 22.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
     font-weight: 500;
-    background-color: #f8f9fa;
-    border-radius: 0.2rem;
     text-shadow: 0rem 0rem 0.5rem 0rem rgb(103, 103, 103);
 }
-#imagem-cartaz{
-    margin-top: -30rem;
-    margin-left: -21.5rem;
-    display: flex;
+#imagem-detalhes{
     width: 20.63rem;
     height: 30rem;
     border-radius: 0.25rem;
     box-shadow: 0rem 0rem 0.5rem 0rem rgb(103, 103, 103);
+}
+#div-detalhes-card{
+    float: left;
+    margin-top: -29rem;
+    margin-left: 22rem;
+    background-color: #f8f9fa;
+    border-radius: 0.3rem;
+    line-height: 3rem;
 }
