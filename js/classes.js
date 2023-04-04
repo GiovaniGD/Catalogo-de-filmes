@@ -138,8 +138,13 @@ class Filme{
 
         let btnSalvar = document.createElement("button");
         btnSalvar.setAttribute("id", "btn-salvar");
-        btnSalvar.appendChild(document.createTextNode("Salvar"));
+        btnSalvar.appendChild(document.createTextNode("Favoritar"));
         divDetalhesFilme.appendChild(btnSalvar);
+
+        let btnExcluir = document.createElement("button");
+        btnExcluir.setAttribute("id", "btn-excluir");
+        btnExcluir.appendChild(document.createTextNode("Desfavoritar"));
+        divDetalhesFilme.appendChild(btnExcluir);
 
         return divDetalhesFilme;
     }
