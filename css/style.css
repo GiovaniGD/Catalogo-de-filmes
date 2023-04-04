@@ -48,13 +48,13 @@ body{
 }
 .btnDetalhesFilme{
     margin-top: 0.7rem;
-    margin-left: 6.68rem;
+    margin-left: 5.4rem;
     color: #198754;
     background-color: transparent;
     border-color: #198754;
     border: 1px solid #198754;
     font-size: 1rem;
-    padding: 0.335rem 0.75rem;
+    padding: 0.335rem 2rem;
     font-size: 1rem;
     border-radius: 1.3rem;
     transition: color .15s ease-in-out,
@@ -67,18 +67,21 @@ body{
     color: white;
     background-color: #198754;
 }
+#div-fechar{
+    float: left;
+}
 #btn-fechar{
     float: left;
     display: flex;
     margin-top: 2.5rem;
-    margin-left: 3.5rem;
+    margin-left: 80rem;
     font-weight: 500;
     color: #ca3535;
     background-color: transparent;
     border-color: #ca3535;
     border: 1px solid #ca3535;
     font-size: 1rem;
-    padding: 0.335rem 1rem;
+    padding: 0.335rem 2rem;
     border-radius: 1.3rem;
     transition: color .15s ease-in-out,
     background-color .15s ease-in-out,
@@ -90,18 +93,21 @@ body{
     color: white;
     background-color: #ca3535;
 }
+#div-salvar{
+    float: left;
+}
 #btn-salvar{
     float: left;
     display: flex;
-    margin-top: 2.5rem;
-    margin-left: 4rem;
+    margin-top: 1.7rem;
+    margin-left: -84.5rem;
     color: #198754;
     font-weight: 500;
     background-color: transparent;
     border-color: #198754;
     border: 1px solid #198754;
     font-size: 1rem;
-    padding: 0.335rem 1.15rem;
+    padding: 0.335rem 5.7rem;
     border-radius: 1.3rem;
     transition: color .15s ease-in-out,
     background-color .15s ease-in-out,
@@ -112,6 +118,35 @@ body{
     border-color: transparent;
     color: white;
     background-color: #198754;
+}
+#btn-salvar:active{
+    background-color: #66e0a7;
+}
+#btn-excluir{
+    float: left;
+    display: flex;
+    margin-top: 4.5rem;
+    margin-left: -84.5rem;
+    color: #198754;
+    font-weight: 500;
+    background-color: transparent;
+    border-color: #198754;
+    border: 1px solid #198754;
+    font-size: 1rem;
+    padding: 0.335rem 5rem;
+    border-radius: 1.3rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+#btn-excluir:hover{
+    border-color: transparent;
+    color: white;
+    background-color: #198754;
+}
+#btn-excluir:active{
+    background-color: #66e0a7;
 }
 #mostrar-filme{
     display: flex;
